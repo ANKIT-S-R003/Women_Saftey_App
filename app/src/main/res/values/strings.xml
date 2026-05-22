@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SafeGuard</string>
+
+    <string name="logo_description">Application Logo</string>
+    <string name="video_thumbnail">Video thumbnail</string>
+
+    <string name="sign_up">Sign up</string>
+</resources>

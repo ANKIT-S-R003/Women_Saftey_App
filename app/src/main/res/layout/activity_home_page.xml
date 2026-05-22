@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".HomePageActivity">
+
+    <!-- START: Add this Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="SafeGuard"
+            app:titleTextColor="@android:color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- END: Add this Toolbar -->
+
+
+    <!-- This ScrollView now sits BELOW the toolbar -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout"
+        android:fillViewport="true">
+
+        <!-- The rest of your original layout is inside here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header Section (Can be removed if you like the toolbar better) -->
+            <ImageView
+                android:id="@+id/imgLogoHeader"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="App Logo"
+                android:src="@drawable/logo" />
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="SafeGuard"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvAppDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Safety Companion"
+                android:textSize="16sp" />
+
+            <!-- SOS Button Section -->
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSos"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#D32F2F"
+                    android:contentDescription="Emergency SOS Button"
+                    app:cornerRadius="100dp"
+                    app:icon="@drawable/ic_warning"
+                    app:iconGravity="textTop"
+                    app:iconSize="64dp"
+                    app:iconTint="@color/white" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingHorizontal="32dp"
+                android:text="Hold for 5 seconds to send alerts to your contacts with your location."
+                android:textAlignment="center" />
+
+            <!-- Options Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:columnCount="2"
+                android:rowCount="2">
+                <!-- Emergency Contacts Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardEmergencyContacts"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="Emergency Contacts Icon"
+                            android:src="@drawable/ic_contacts"
+                            app:tint="?attr/colorPrimary" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Manage your emergency contacts"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tvContactsCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="5 available" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <!-- Self Defence Videos Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardSelfDefence"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="Self Defence Videos Icon"
+                            android:src="@drawable/ic_video"
+                            app:tint="?attr/colorPrimary" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Learn protection techniques"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tvVideosCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="10 available" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <!-- Nearby Services Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardNearbyServices"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:contentDescription="Nearby Services Icon"
+                            android:src="@drawable/ic_location"
+                            app:tint="?attr/colorPrimary" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Find hospitals &amp; police stations"
+                            android:textAlignment="center"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tvNearbyCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="15 available" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </GridLayout>
+            <!-- Safety Tips Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Safety Tips"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="• Be aware of your surroundings.\n• Trust your instincts.\n• Avoid walking alone at night." />
+
+            <!-- We can keep the button at the bottom or remove it. Let's remove it for a cleaner look. -->
+            <!--
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Logout"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:icon="@drawable/ic_logout" />
+            -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
