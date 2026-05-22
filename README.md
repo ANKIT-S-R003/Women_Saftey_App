@@ -27,10 +27,14 @@ It acts as a **personal safety companion** with features like SOS alerts, emerge
 ## 📱 App Screenshots
 
 <p align="center">
-  <img src="attachments/suRz3QZHhrHfFMm7GaRzk.png" alt="SafeGuard SOS Screen" width="250"/>
-  <img src="attachments/nzc2i9iYbtuLm88go5izX.png" alt="Emergency Contacts Screen" width="250"/>
-  <img src="attachments/tDo49LUAYoQzvSug3apCo.png" alt="Nearby Services Screen" width="250"/>
-  <img src="attachments/pMq2A79pvHnYt8ZSw2xTR.png" alt="SafeGuard Home Screen" width="250"/>
+  <img width="200" height="500" alt="Screenshot_20260522_123812" src="https://github.com/user-attachments/assets/278f2b39-ad77-46ce-9641-fa50f782a9ce" />
+
+  <img width="200" height="500" alt="Screenshot_20260522_123858" src="https://github.com/user-attachments/assets/f766a02b-6a31-49a8-b682-e9d1d292e353" />
+
+  <img width="200" height="500" alt="Screenshot_20260522_123927" src="https://github.com/user-attachments/assets/99697473-2d29-4f22-8afe-62a947d20bab" />
+
+ <img width="200" height="500" alt="Screenshot_20260522_123953" src="https://github.com/user-attachments/assets/f03b7c6a-e475-4e57-9265-ff85ce695f7b" />
+
 </p>
 
 ---
